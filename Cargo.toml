@@ -2,6 +2,14 @@
 name = "fast-ordered-buffer"
 version = "0.1.0"
 edition = "2024"
+authors = ["Josiah Bull <josiah.bull7@gmail.com>"]
+description = "A faster buffering implementation for asynchronous streams, trading off memory usage for speed."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/JosiahBull/fast-ordered-buffer"
+keywords = ["buffer", "ordered", "fast"]
+categories = ["data-structures", "algorithms"]
+readme = "README.md"
+homepage = "https://github.com/JosiahBull/fast-ordered-buffer"
 
 [profile.bench]
 opt-level = 3
