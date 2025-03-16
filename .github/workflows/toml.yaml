@@ -1,12 +1,15 @@
 name: dep-lint
 
 on:
-  push:
+  pull_request:
     paths:
       - "**/Cargo.toml"
       - "**/Cargo.lock"
       - "Cargo.toml"
       - "Cargo.lock"
+  push:
+    branches:
+      - main
 
 # see https://matklad.github.io/2021/09/04/fast-rust-builds.html
 env:

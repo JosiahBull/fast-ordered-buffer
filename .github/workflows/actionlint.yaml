@@ -7,8 +7,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - ".github/workflows/*.yaml"
 
 permissions:
   contents: read

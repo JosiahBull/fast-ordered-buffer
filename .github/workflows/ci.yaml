@@ -1,7 +1,7 @@
 name: Tests
 
 on:
-  push:
+  pull_request:
     paths:
       - ".cargo/*.toml"
       - ".github/workflows/*.yaml"
@@ -9,6 +9,9 @@ on:
       - "mutants_attrs/**"
       - "**/src/**"
       - "**/tests/**"
+  push:
+    branches:
+      - main
 
 # see https://matklad.github.io/2021/09/04/fast-rust-builds.html
 env:
@@ -76,13 +79,3 @@ jobs:
         run: cargo install cargo-deny
       - name: Check cargo-deny
         run: cargo deny check
-
-      # Build an artifact for this job
-      - name: Build release binary
-        run: cargo build --release
-      - name: Upload binary artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: send-server
-          path: |
-            target/release/server
