@@ -37,7 +37,6 @@ jobs:
       - name: Install tooling
         run: |
           cargo +nightly install --locked cargo-udeps
-          cargo +nightly install --locked cargo-autoinherit
       - name: Show Cargo and rustc version
         run: |
           cargo +nightly --version
