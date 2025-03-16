@@ -75,7 +75,7 @@ We use criterion to benchmark the performance of this library against the future
 cargo bench
 ```
 
-We take the Mean time taken for each buffer type, `fast_ordered_buffer`, `unordered_buffer`, and `buffer`, rounded to the nearest millisecond.
+We take the mean time taken for each buffer type, `fast_ordered_buffer`, `unordered_buffer`, and `buffer`, rounded to the nearest millisecond.
 
 ### Results
 
