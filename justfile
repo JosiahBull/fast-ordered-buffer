@@ -1,13 +1,5 @@
 repo := 'ghcr.io/josiahbull/send'
 
-# General SQLX files
-codegen:
-    @export DATABASE_URL=sqlite://$PWD/test.db
-    @echo y | @sqlx database drop
-    @sqlx database create
-    @sqlx migrate run --source ./crates/database/migrations
-    @sqlx prepare --workspace
-
 # Run formatting
 fmt:
 format:
@@ -26,11 +18,6 @@ test:
 clean:
     @cargo clean
     @git clean -fdX
-
-# Update the insta snapshots
-update-snapshots:
-    @cargo insta test
-    @cargo insta accept
 
 # Publish this crate to crates.io
 publish:
