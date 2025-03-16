@@ -81,9 +81,9 @@ We take the Mean time taken for each buffer type, `fast_ordered_buffer`, `unorde
 
 | Buffer Type         | 10k Random Futures (Concurrency = 50) | 1k Random Futures (Concurrency = 10) |
 |---------------------|---------------------------------------|--------------------------------------|
-| fast_ordered_buffer | 755ms                                 | 399ms                                |
-| unordered_buffer    | 734ms                                 | 366ms                                |
-| buffer              | 1169ms                                | 514ms                                |
+| `fast_ordered_buffer` | 755ms                                 | 399ms                                |
+| `unordered_buffer`    | 734ms                                 | 366ms                                |
+| `buffer`              | 1169ms                                | 514ms                                |
 
 ## Contribution
 
